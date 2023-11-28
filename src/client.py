@@ -13,6 +13,7 @@ class Client:
 
     def __init__(self, wsclient):
         self.wsclient = wsclient
+        self.handler_id = self.wsclient["id"]
         self.ip_address = self.wsclient["address"][0]
         self.port = self.wsclient["address"][1]
 
@@ -20,6 +21,10 @@ class Client:
 
         self.id = generate_hex(32)
         self.gid = hash_ip(self.ip_address)
+
+        self.valid = False
+        self.last_ping = 0
+
         self.color = rgb_from_ip(self.ip_address)
         self.position = coords_from_ip(self.ip_address)
 
@@ -67,7 +72,7 @@ class Client:
 
 
     def get_handler_id(self):
-        return self.wsclient["id"]
+        return self.handler_id
 
 
     def get_address(self):
@@ -76,3 +81,7 @@ class Client:
 
     def get_port(self):
         return self.port
+
+    def update(self):
+        # Check if last ping > timeout length
+        pass

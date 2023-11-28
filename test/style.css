@@ -1,0 +1,95 @@
+:root {
+	--fg-color: #FFFFFF;
+	--bg-color: #000000;
+	--theme-color: #00FF00;
+	--toggled-color: #FF0000;
+	--waiting-color: #FFFF00;
+}
+
+#host {
+	
+}
+
+#connect {
+
+}
+
+#main-container {
+
+}
+
+.columns {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+#log-container {
+	border-radius: 4px;
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+	height: 70vh;
+	padding: 3px 10px;
+	margin: 0;
+	overflow-y: scroll;
+	margin-bottom: 14px;
+}
+
+#log {
+	display: inline-block;
+	font-size: 12px;
+	font-family: monospace;
+}
+
+#log ::selection {
+	color: var(--bg-color);
+	background-color: var(--theme-color);
+}
+
+#log ::-moz-selection {
+	color: var(--bg-color);
+	background-color: var(--theme-color);
+}
+
+#log ::-webkit-selection {
+	color: var(--bg-color);
+	background-color: var(--theme-color);
+}
+
+.log-entry {
+	vertical-align: 0px;
+}
+
+.log-entry .log-entry-timestamp {
+	color: #888888;
+}
+
+.log-entry .log-entry-sender {
+	border-radius: 3px;
+	padding: 0px 5px;
+}
+
+.log-entry .log-entry-sender-console {
+	
+}
+
+.log-entry .log-entry-sender-websocket {
+	color: #9999FF;
+	font-weight: bold;
+}
+
+.log-entry .log-entry-message {
+	
+}
+
+#canvas-container {
+	border-radius: 4px;
+	border: 4px solid var(--bg-color);
+	background-color: var(--bg-color);
+	height: 70vh;
+	margin-bottom: 14px;
+}
+
+#canvas {
+	display: block;
+}

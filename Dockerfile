@@ -11,6 +11,8 @@ COPY requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt \
 	&& rm /tmp/requirements.txt
 
+WORKDIR /mnt
+
 EXPOSE 8080/tcp
 
-CMD ["python3", "./src/"]
+CMD ["python3", "src/"]

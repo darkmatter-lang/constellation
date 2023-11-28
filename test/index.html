@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Constellation: Test Client</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma-prefers-dark/0.1.0-beta.1/bulma-prefers-dark.min.css" integrity="sha512-8L9NjgWBr9opkijcN9ZZCzzl7T3hVqji0baeKdTvfq1VN119XV4RNCGGI6vAF8ygQkSK0Qew84toTqqpzmbxUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<section class="section">
+			<div class="container">
+				<div class="content">
+					<h2 class="title is-2">Constellation Test Client</h2>
+
+					<div class="field is-grouped">
+						<p class="control is-expanded">
+							<input id="host" class="input" type="text" placeholder="ws://localhost:8080" value="ws://localhost:8080" required />
+						</p>
+						<p class="control">
+							<input id="connect" class="button is-success" type="button" value="Connect" />
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<br><br>
+
+			<div id="main-container">
+				<div class="columns">
+					<div class="column is-3 is-fullheight">
+						<h3 class="title is-3">Console</h3>
+						<hr>
+						<div id="log-container">
+							<div id="log"></div>
+						</div>
+						<div class="field is-grouped is-grouped-multiline">
+							<p class="control">
+								<input id="clear-console" class="button is-danger is-small" type="button" value="Clear Console" />
+							</p>
+							<p class="control">
+								<input id="print-active-stars" class="button is-link is-small" type="button" value="Print Active Stars" />
+							</p>
+						</div>
+					</div>
+					<div class="column is-9 is-fullheight">
+						<h3 class="title is-3">Canvas</h3>
+						<hr>
+						<div id="canvas-container">
+							<canvas id="canvas" width="0" height="0"></canvas>
+						</div>
+						<div class="field is-grouped is-grouped-multiline">
+							<p class="control">
+								<input id="clear-canvas" class="button is-warning is-small" type="button" value="Clear" />
+							</p>
+							<p class="control">
+								<input id="fill-canvas-rgb" class="button is-warning is-small" type="button" value="Fill (RGB)" />
+							</p>
+							<p class="control">
+								<input id="fill-canvas-bw" class="button is-warning is-small" type="button" value="Fill (BW)" />
+							</p>
+							<p class="control">
+								<input id="redraw-canvas" class="button is-primary is-small" type="button" value="Redraw" />
+							</p>
+							<p class="control">
+								<input id="fetch-star-list" class="button is-link is-small" type="button" value="Fetch Star List" />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./client.js"></script>
+	<script src="./script.js" defer></script>
+</html>

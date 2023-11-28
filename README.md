@@ -373,7 +373,7 @@ Run the container:
 ```bash
 docker run --rm \
 	-it \
-	--net darkmatter \
+	-p 8080:8080/tcp \
 	--name darkmatter-constellation \
 	-h darkmatter-constellation \
 	-v "$(pwd):/mnt:ro" \
