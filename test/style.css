@@ -1,9 +1,7 @@
 :root {
 	--fg-color: #FFFFFF;
 	--bg-color: #000000;
-	--theme-color: #00FF00;
-	--toggled-color: #FF0000;
-	--waiting-color: #FFFF00;
+	--green-color: #00FF00;
 }
 
 #host {
@@ -43,17 +41,17 @@
 
 #log ::selection {
 	color: var(--bg-color);
-	background-color: var(--theme-color);
+	background-color: var(--green-color);
 }
 
 #log ::-moz-selection {
 	color: var(--bg-color);
-	background-color: var(--theme-color);
+	background-color: var(--green-color);
 }
 
 #log ::-webkit-selection {
 	color: var(--bg-color);
-	background-color: var(--theme-color);
+	background-color: var(--green-color);
 }
 
 .log-entry {

@@ -358,7 +358,7 @@ Messages can be sent on channels `1-256`, channel `0` is reserved for system com
 
 ## Build
 
-Ensure you *first* deploy [Darkmatter's Site](https://github.com/darkmatter-lang/darkmatter-site) before deploying this project.
+Ensure you *first* deploy [Darkmatter's Site](https://github.com/darkmatter-lang/site) before deploying this project.
 
 ### Build Docker image
 

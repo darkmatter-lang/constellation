@@ -56,7 +56,6 @@ class Server():
             c.disconnect()
         
         logger.info(f"Shutting down!")
-        self.update_thread.stop()
         self.server.shutdown_gracefully()
 
     def on_connect(self, client, server):
